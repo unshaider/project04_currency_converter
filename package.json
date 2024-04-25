@@ -1,11 +1,11 @@
 {
-  "name": "project04_currency_converter",
-  "version": "1.0.0",
+  "name": "syedunshaiderzaidi_currency_converter",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "syedunshaiderzaidi_atm": "main.js"
+    "syedunshaiderzaidi_currency_converter": "main.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
