@@ -89,4 +89,4 @@ let answer = await inquirer.prompt([
 ]);
 let fromCurrency = currency[answer.from];
 let toCurrency = currency[answer.to];
-console.log(chalk.green(`${answer.amount} ${answer.from} is equal to ${(answer.amount * toCurrency) / fromCurrency}.`));
+console.log(chalk.green(`${answer.amount} ${answer.from} is equal to ${(answer.amount * toCurrency) / fromCurrency} ${answer.to}.`));

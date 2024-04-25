@@ -97,6 +97,6 @@ console.log(
   chalk.green(
     `${answer.amount} ${answer.from} is equal to ${
       (answer.amount * toCurrency) / fromCurrency
-    }.`
+    } ${answer.to}.`
   )
 );
