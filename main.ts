@@ -26,10 +26,17 @@ const currency: any = {
   CNY: 7.24,
   HKD: 7.83,
 };
+
+console.log(chalk.blue('Welcome to the Currency Converter!'));
 let answer = await inquirer.prompt([
   {
+    name: "amount",
+    message: "Enter the amount to convert:",
+    type: "number",
+  },
+  {
     name: "from",
-    message: "Enter From Currency",
+    message: "Select the base currency:",
     type: "list",
     choices: [
       "USD",
@@ -57,7 +64,7 @@ let answer = await inquirer.prompt([
   },
   {
     name: "to",
-    message: "Enter To Currency",
+    message: "Select the target currency:",
     type: "list",
     choices: [
       "USD",
@@ -83,18 +90,13 @@ let answer = await inquirer.prompt([
       "HKD",
     ],
   },
-  {
-    name: "amount",
-    message: "Enter the Amount",
-    type: "number",
-  },
 ]);
 
 let fromCurrency = currency[answer.from];
 let toCurrency = currency[answer.to];
 
 console.log(
-  chalk.green(
+  chalk.blue(
     `${answer.amount} ${answer.from} is equal to ${
       (answer.amount * toCurrency) / fromCurrency
     } ${answer.to}.`
